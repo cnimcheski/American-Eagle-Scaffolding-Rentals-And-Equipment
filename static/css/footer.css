@@ -1,0 +1,157 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  gap: 30px;
+  padding: 50px 0 30px 0;
+
+  background-color: rgb(34, 34, 34);
+}
+
+.top {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  gap: 50px;
+}
+
+.footer .horizontal-divider {
+  width: 90%;
+  margin: 0 auto;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.5)
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.bottom p {
+  text-align: center;
+}
+
+.footer .headline {
+  flex: 30;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.logo {
+  width: 80px;
+}
+
+.office {
+  flex: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 22px;
+}
+
+.office a {
+  text-align: left;
+}
+
+.office a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.office a:focus {
+  text-decoration: none;
+  color: white;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.header p {
+  font-size: 17px;
+}
+
+.links,
+.rentals {
+  flex: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.link {
+  transition: color 0.05s;
+  transition: opacity 0.05s;
+}
+
+.link.active {
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0.9;
+}
+
+.link:hover {
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1.0;
+}
+
+.underline {
+  width: 100%;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.underline span {
+  width: 15px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .footer .headline,
+  .office,
+  .rentals,
+  .links {
+    flex: 1;
+    flex-basis: 40%;
+  }
+
+  .top {
+    width: 90%;
+    flex-wrap: wrap;
+  }
+
+  .footer .horizontal-divider {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer .headline,
+  .office {
+    flex-basis: 100%;
+  }
+}

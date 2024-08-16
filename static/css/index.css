@@ -1,0 +1,158 @@
+.company-description {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.description-header {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 25px;
+}
+
+.description-header,
+.about-button,
+.take-action-button,
+.about-link,
+.take-action-link {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+}
+
+.description-details {
+  text-align: center;
+  font-weight: 300;
+  font-size: 25px;
+  width: 70%;
+}
+
+.enticement-container {
+  display: flex;
+
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.about,
+.take-action {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-image-href,
+.take-action-image-href {
+  width: 75%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.about-image,
+.take-action-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-button,
+.take-action-button {
+  color: black;
+  font-size: 25px;
+  transition: opacity 0.05s;
+}
+
+.about-button:hover,
+.take-action-button:hover {
+  opacity: 0.5;
+}
+
+.about-details,
+.take-action-details {
+  color: black;
+  font-size: 22px;
+  font-weight: 300;
+  width: 75%;
+  text-align: center;
+}
+
+.about-link,
+.take-action-link {
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  font-size: 23px;
+  transition: opacity 0.05s;
+}
+
+.about-link:hover,
+.take-action-link:hover {
+  opacity: 0.5;
+}
+
+.about-description,
+.take-action-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.arrow-right {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 10px;
+
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+@media (max-width: 650px) {
+  .enticement-container {
+    flex-direction: column;
+    justify-content: center;
+
+    margin-bottom: 30px;
+  } 
+
+  .about-image-href,
+  .take-action-image-href,
+  .take-action-details,
+  .about-details,
+  .description-details {
+    width: 90%;
+  }
+
+  .about-details,
+  .take-action-details {
+    font-size: 18px;
+  }
+
+  .about-link {
+    margin-bottom: 50px;
+  }
+
+  .about-link,
+  .take-action-link {
+    font-size: 19px;
+  }
+
+  .arrow-right {
+    border-width: 0 2px 2px 0;
+  }
+
+  .description-header {
+    font-size: 25px;
+  }
+
+  .description-details {
+    font-size: 20px;
+  }
+}

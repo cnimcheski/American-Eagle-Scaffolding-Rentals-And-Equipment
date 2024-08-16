@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block head %}{% endblock %}
+    <meta charset="utf-8">
+    <meta name="author" content="Leonard Barilone">
+    <meta name="keywords" content="stucco, Arizona stucco, eifs, panels, panelization, brick, stone, veneer, stucco repair, contractor, Arizona stucco contractor">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="icon" type="image/x-icon" href="static/images/logo.png">
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/header.css">
+    <link rel="stylesheet" href="static/css/footer.css">
+    <link rel="stylesheet" href="static/css/general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- font awesome js -->
+    <script src="https://kit.fontawesome.com/04d4dd337d.js" crossorigin="anonymous"></script>
+
+    <!-- bootstrap js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="/">American Eagle Scaffolding Rentals & Equipment</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <div class="navigation-buttons">
+            <a href="/" class="navigation-item {% if active_page == 'home' %}active{% endif %}">Home</a>
+            <a href="/about" class="navigation-item {% if active_page == 'about' %}active{% endif %}">About</a>
+            <a href="/rentals" class="navigation-item {% if active_page == 'rentals' %}active{% endif %}">Rentals</a>
+            <a href="/contact-us" class="navigation-item {% if active_page == 'contact-us' %}active{% endif %}">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    {% if is_home is not defined %}
+      {% set is_home = False %}
+    {% endif %}
+
+    {% if is_home %}
+      <div class="header-image-container">
+        <img class="home-image" src="static/images/scaffold2.jpg">
+    
+        <div class="home-image-overlay-container">
+          <p class="home-image-overlay-text-top">scaffold and equipment rentals</p>
+          <p class="home-image-overlay-text-bottom">IN THE VALLEY</p>
+          <a class="home-image-overlay-learn-more-button" href="/about">Learn More</a>
+        </div>
+      </div>
+    {% else %}
+      <div class="header-image-container">
+        <img class="header-image" src="static/images/{% block header_image %}{% endblock %}">
+
+        <div class="header-image-overlay">{% block header_overlay_text %}{% endblock %}</div>
+      </div>
+    {% endif %}
+
+    <main>
+      {% block main %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+      <div class="top">
+        <div class="headline">
+          <!-- LOWER THE SIZE OF THIS IMAGE... -->
+          <img src="static/images/logo.png" class="logo">
+  
+          <p>We're here to provide all of your scaffolding and equipment needs. Contact us today for rental estimates!</p>
+        </div>
+  
+        <div class="office">
+          <div class="header">
+            <p>Office</p>
+            <div class="underline"><span></span></div>
+          </div>
+
+          <a href="https://www.google.com/maps/place/American+Eagle+Stucco,+LLC/@33.608177,-111.7223225,17z/data=!3m1!4b1!4m6!3m5!1s0x872b988e9637e3bf:0x79b8d337b46cea3b!8m2!3d33.6081726!4d-111.7197476!16s%2Fg%2F11hy9p8dgk?entry=ttu" target="_blank">16719 E Palisades Blvd #102 Fountain Hills, AZ 85268</a>
+          <a href="tel:4808375997">602-437-1078</a>
+        </div>
+  
+        <div class="links">
+          <div class="header">
+            <p>Links</p>
+            <div class="underline"><span></span></div>
+          </div>
+
+          <a href="/" class="link {% if active_page == 'home' %}active{% endif %}">Home</a>
+          <a href="/about" class="link {% if active_page == 'about' %}active{% endif %}">About</a>
+          <a href="/rentals" class="link {% if active_page == 'rentals' %}active{% endif %}">Rentals</a>
+          <a href="/contact-us" class="link {% if active_page == 'contact-us' %}active{% endif %}">Contact Us</a>
+        </div>
+
+        <div class="rentals">
+          <div class="header">
+            <p>Rentals</p>
+            <div class="underline"><span></span></div>
+          </div>
+
+          <!-- FIX UP THE RENTALS... -->
+          <a href="{{ url_for('rentals') }}#scaffold-plank" class="link">scaffold plank</a>
+          <a href="{{ url_for('rentals') }}#scaffold-accessories" class="link">scaffold accessories</a>
+          <a href="{{ url_for('rentals') }}#rolling-scaffold" class="link">rolling scaffold</a>
+          <a href="{{ url_for('rentals') }}#harness" class="link">harness</a>
+        </div>
+      </div>
+
+      <div class="horizontal-divider"></div>
+
+      <div class="bottom">
+        <p>American Eagle Scaffolding Rentals & Equipment &#169 2017 - All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!-- scroll reveal js -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="static/javascript/script.js"></script>
+  </body>
+</html>
