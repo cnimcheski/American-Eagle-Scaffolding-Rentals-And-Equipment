@@ -1,9 +1,44 @@
-.rental-examples {
-
+.index {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }
 
-.rental-examples h2 {
-  
+.rental-examples {
+  display: flex;
+  flex-direction: column;
+}
+
+.rental-examples h1 {
+  text-align: center;
+  color: black;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+}
+
+.rental-examples .examples {
+  display: flex;
+}
+
+.examples div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.examples div img {
+  width: 300px;
+}
+
+.examples h3,
+.examples p {
+  color: black;
+}
+
+.examples p {
+  width: 70%;
+  text-align: center;
 }
 
 .company-description {
