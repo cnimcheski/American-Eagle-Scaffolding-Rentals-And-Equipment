@@ -17,11 +17,6 @@ def rentals():
     return render_template("rentals.html", active_page="rentals")
 
 
-# @app.route("/projects")
-# def projects():
-#     return render_template("projects.html", active_page="projects")
-
-
 @app.route("/contact-us")
 def contact():
     return render_template("contact-us.html", active_page="contact-us")
