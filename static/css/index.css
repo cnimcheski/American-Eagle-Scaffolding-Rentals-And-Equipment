@@ -4,6 +4,10 @@
   gap: 60px;
 }
 
+.bottom2 {
+  background-color: rgb(238, 238, 238);
+}
+
 .rental-examples {
   display: flex;
   flex-direction: column;
