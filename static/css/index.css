@@ -35,9 +35,16 @@
 
 .examples div a {
   color: black;
+  font-size: 16px;
+  font-weight: 500;
   display: flex;
   gap: 8px;
   align-items: center;
+  transition: opacity 0.05s;
+}
+
+.examples div a:hover {
+  opacity: 0.5;
 }
 
 .examples div img {
@@ -52,6 +59,9 @@
 
 .examples p {
   width: 70%;
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -68,6 +78,7 @@
   text-align: center;
   font-size: 34px;
   margin-bottom: 25px;
+  width: 90%;
 }
 
 .description-header,
@@ -169,6 +180,24 @@
 
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+}
+
+@media (max-width: 930px) {
+  .rental-examples .examples {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .examples div {
+    flex: none;
+    width: 50%;
+  }
+}
+
+@media (max-width: 670px) {
+  .examples div {
+    width: 100%;
+  }
 }
 
 @media (max-width: 650px) {
