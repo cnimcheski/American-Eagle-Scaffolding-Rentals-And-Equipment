@@ -1,10 +1,11 @@
 .index {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
 
-.bottom2 {
+.company-details {
   background-color: rgb(238, 238, 238);
 }
 
@@ -25,10 +26,18 @@
 }
 
 .examples div {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1;
+  gap: 12px;
+}
+
+.examples div a {
+  color: black;
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 .examples div img {
@@ -37,6 +46,7 @@
 
 .examples h3,
 .examples p {
+  margin: 0;
   color: black;
 }
 
