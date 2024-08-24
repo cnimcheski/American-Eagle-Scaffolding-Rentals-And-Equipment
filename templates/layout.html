@@ -23,6 +23,7 @@
     <!-- bootstrap js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="static/javascript/bootstrap-hover-dropdown.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -37,11 +38,20 @@
         </div>
 
         <div class="collapse navbar-collapse" id="myNavbar">
-          <div class="navigation-buttons">
-            <a href="/" class="navigation-item {% if active_page == 'home' %}active{% endif %}">Home</a>
-            <a href="/about" class="navigation-item {% if active_page == 'about' %}active{% endif %}">About</a>
-            <a href="/rentals" class="navigation-item {% if active_page == 'rentals' %}active{% endif %}">Rentals</a>
-            <a href="/contact-us" class="navigation-item {% if active_page == 'contact-us' %}active{% endif %}">Contact Us</a>
+          <ul class="navigation-buttons">
+            <li><a href="/" class="navigation-item {% if active_page == 'home' %}active{% endif %}">Home</a></li>
+            <li><a href="/about" class="navigation-item {% if active_page == 'about' %}active{% endif %}">About</a></li>
+            <li class="dropdown"><a href="/rentals" class="navigation-item {% if active_page == 'rentals' %}active{% endif %} dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Rentals <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="{{ url_for('rentals') }}#scaffold-plank">scaffold plank</a></li>
+                <li><a href="{{ url_for('rentals') }}#rolling-scaffold">rolling scaffold</a></li>
+                <li><a href="{{ url_for('rentals') }}#scaffold-accessories">scaffold accessories</a></li>
+                <li><a href="{{ url_for('rentals') }}#harness">harness</a></li>
+                <li><a href="{{ url_for('rentals') }}#other-equipment">safety equipment</a></li>
+                <li><a href="{{ url_for('rentals') }}#other-equipment">construction signage</a></li>
+              </ul>
+            </li>
+            <li><a href="/contact-us" class="navigation-item {% if active_page == 'contact-us' %}active{% endif %}">Contact Us</a></li>
           </div>
         </div>
       </div>
@@ -110,11 +120,12 @@
             <div class="underline"><span></span></div>
           </div>
 
-          <!-- FIX UP THE RENTALS... -->
           <a href="{{ url_for('rentals') }}#scaffold-plank" class="link">scaffold plank</a>
-          <a href="{{ url_for('rentals') }}#scaffold-accessories" class="link">scaffold accessories</a>
           <a href="{{ url_for('rentals') }}#rolling-scaffold" class="link">rolling scaffold</a>
+          <a href="{{ url_for('rentals') }}#scaffold-accessories" class="link">scaffold accessories</a>
           <a href="{{ url_for('rentals') }}#harness" class="link">harness</a>
+          <a href="{{ url_for('rentals') }}#other-equipment" class="link">safety equipment</a>
+          <a href="{{ url_for('rentals') }}#other-equipment" class="link">construction signage</a>
         </div>
       </div>
 

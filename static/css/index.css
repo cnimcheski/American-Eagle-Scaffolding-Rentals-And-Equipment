@@ -33,6 +33,10 @@
   gap: 12px;
 }
 
+.examples .horizontal-divider {
+  display: none;
+}
+
 .examples div a {
   color: black;
   font-size: 16px;
@@ -183,18 +187,33 @@
 }
 
 @media (max-width: 930px) {
+  .examples .horizontal-divider.first {
+    display: block;
+    height: 2px;
+    width: 90%;
+    background-color: black;
+  }
+
   .rental-examples .examples {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 30px;
   }
 
   .examples div {
     flex: none;
-    width: 50%;
+    width: 47%;
   }
 }
 
 @media (max-width: 670px) {
+  .examples .horizontal-divider.second {
+    display: block;
+    height: 2px;
+    width: 90%;
+    background-color: black;
+  }
+
   .examples div {
     width: 100%;
   }
