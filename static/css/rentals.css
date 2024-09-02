@@ -1,3 +1,13 @@
+.delivery {
+  color: black;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 0;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+}
+
 .services-header-details {
   font-size: 40px;
   padding: 0 50px;
@@ -7,7 +17,6 @@
 .services {
   display: flex;
   flex-direction: column;
-  gap: 50px;
 }
 
 .services-header {
@@ -74,6 +83,10 @@
 }
 
 @media (max-width: 1000px) {
+  .delivery {
+    width: 90%;
+  }
+
   .service.gray .service-contents {
     flex-direction: column-reverse;
   }
