@@ -76,9 +76,8 @@
   font-size: 20px;
 }
 
-.service .img {
+.service img {
   height: 350px;
-  /* width: 35%; */
   object-fit: cover;
 }
 
@@ -95,7 +94,8 @@
     flex-direction: column;
   }
 
-  .service .img {
+  .service img {
+    height: 100%;
     width: 100%;
   }
 }
