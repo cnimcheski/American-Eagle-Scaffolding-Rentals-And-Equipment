@@ -78,6 +78,11 @@
   align-items: center;
 }
 
+.maps .map img {
+  /* ADDED STYLINGS */
+  width: 100%;
+}
+
 .contact-us h2 {
   font-family: "Quicksand", sans-serif;
   margin: 20px 0;
